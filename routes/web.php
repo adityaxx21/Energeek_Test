@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Form_Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Form_Controller::class, 'index']);
+Route::post('/index_post', [Form_Controller::class, 'index_post']);
 
